@@ -1,0 +1,17 @@
+Provides nicely formatted layered debug output.
+Dependencies: jQuery loaded somewhere in the page.
+
+Usage: {$item|bfdebug($depth, $params)}
+
+$depth is how many levels deep we display (DEFAULT: 1)
+$params 
+
+ * pos ("tail" - after the last body element, 
+ * 		"top" - before the first body element,
+ * 		"inline" - no special positioning (DEFAULT),
+ * 		"custom:{before|after}" (use posDetailPath to describe)
+ * posJqueryPath (jQuery path where the debug statement will be placed) - example: $("body").children().last()
+ 
+TODO: on highlight, provide full path to each attribute key.
+TODO: when out of depth, write jscript that reaches into a static page and renders deeper content, then appends that. With this, you can go any number of levels deep, without ever having to refresh a page.
+TODO: redo how levels are done on the page.

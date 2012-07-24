@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- for params, required by default is true -->
+<!-- type can be string, ... -->
+<operators>
+	<operator name="bfdebug">
+		<param name="depth" type="int" required="false" />
+		<param name="params" type="array" required="false" />
+	</operator>
+	<operator name="bfdebugoverrides" />
+	<operator name="bfdebugvars" />
+	<operator name="bfdebugoperators" />
+</operators>
