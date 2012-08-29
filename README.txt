@@ -54,3 +54,14 @@ bfdebugoperators operator
 
 	Example:{bfdebugoperators()|bfdebug(2)}
 
+
+bfdebugcache template
+-------------------------
+	
+	Echoes out many common cache settings in a comment. Useful for verifying cache settings on a production website.
+
+	After including this template, view source and search for "bfdebugcache".
+
+	Take out the include once you're done. Not that it would really hurt anything to leave it, but it's bad form.
+
+	Example: {include uri="design:bfdebugcache.tpl"}
