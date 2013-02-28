@@ -18,7 +18,7 @@ Adds a toolbar to the debug section allowing you to easily show/hide Debug and N
 
 ### bfdebug operator
 
-Provides nicely formatted layered debug output.
+Provides nicely formatted layered debug output. A replacement for `attribute(show)`.
 
 **Dependencies:** jQuery loaded somewhere in the page.
 
