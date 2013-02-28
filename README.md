@@ -24,15 +24,14 @@ Provides nicely formatted layered debug output.
 
 **Usage:** `{$item|bfdebug($depth, $params)}`
 
-`$depth` is how many levels deep we display *(DEFAULT: 1)*
-`$params` *array*
-
-* `pos => (tail|top|inline|custom)`
-  * `tail` - after the last body element, 
-  * `top` - before the first body element,
-  * `inline` - no special positioning (DEFAULT),
-  * `custom:{before|after}` - (use posDetailPath to describe)
-* `posJqueryPath` (jQuery path where the debug statement will be placed) - example: `$("body").children().last()`
+* `$depth` is how many levels deep we display *(DEFAULT: 1)*
+* `$params` *array*
+  * `pos => (tail|top|inline|custom)`
+    * `tail` - after the last body element, 
+    * `top` - before the first body element,
+    * `inline` - no special positioning (DEFAULT),
+    * `custom:{before|after}` - (use posDetailPath to describe)
+  * `posJqueryPath` (jQuery path where the debug statement will be placed) - example: `$("body").children().last()`
  
 #### Wishlist
 * on highlight, provide full path to each attribute key.
