@@ -1,7 +1,6 @@
 <?php
-require_once(dirname(__FILE__)."/"."../../customExtension.php");
 
-class bfdebug extends customExtension {
+class bfdebug extends bfCustomExtension {
 	protected $xmlDoc = null;
 	
 	function __construct() {
@@ -128,7 +127,20 @@ EOPOSITION;
 		ob_end_clean();
 		return($returnString);
 	}
+
+	public function bfdebugDisableAll() {
+		self::disableAllDebug();
+	}
 	
+	// see XML notes
+	// used for spot-checking dev without any debugging, or for modules that will error out if comments and stuff appear
+	static function disableAllDebug() {
+		eZDebug::updateSettings(array(
+		    "debug-enabled" => false,
+		    "debug-by-ip" => false,
+		));
+	}
+
 	public function debugdumpRecurse($dumpParam, $dumpParamPathArr, $currentDepth, $maxDepth) {
 		list($isSimple, $type) = self::getComplexityType($dumpParam);
 		print "<table class=\"bfdump ".($currentDepth == 1?"toptable":"")."\">\n";
@@ -227,5 +239,6 @@ $valCellId = self::pathToString($childPathArr);
 			return(get_object_vars($objectOrArray));
 		}
 	}
+	
 }
 ?>

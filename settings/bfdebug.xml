@@ -9,4 +9,7 @@
 	<operator name="bfdebugoverrides" />
 	<operator name="bfdebugvars" />
 	<operator name="bfdebugoperators" />
+	<operator name="bfdebugDisableAll"> 
+		<!-- disables ALL debug output. Good for spot checking dev work, or dev-proofing modules/scripts returning json/xml -->
+	</operator>
 </operators>
