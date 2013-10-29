@@ -4,10 +4,10 @@ bfdebug eZPublish extension
 Provides enhanced debug functionality for eZ Publish.
 Specifically, it  
 
-1) Offers four template operators: bfdebug, bfdebugoverrides, bfdebugvars, bfdebugoperators, bfdebugDisableAll. Read usage to see what they do... this all started with bfdebug, which was a Coldfusion-like expandable debug output.
-2) bfdebugcache template (used as an include)
-3) Adds the "spiderFindTemplate.php" script
-4) Reworks the debug bar below so that we can easily turn on and off segments of dev
+1. Offers four template operators: bfdebug, bfdebugoverrides, bfdebugvars, bfdebugoperators, bfdebugDisableAll. Read usage to see what they do... this all started with bfdebug, which was a Coldfusion-like expandable debug output.
+2. bfdebugcache template (used as an include)
+3. Adds the "spiderFindTemplate.php" script
+4. Reworks the debug bar below so that we can easily turn on and off segments of dev
 
 Software Dependencies:
 --------------------------------
@@ -87,10 +87,11 @@ Take out the include once you're done. Not that it would really hurt anything to
 Used to find all places a template is used by spidering all ez nodes, and examining output. If the correct unique string is found, the script will offer a stacktrace-like output to find out what the sequence of template inclusion/execution was.
 
 To use, 
-1) find the template in question (either a template, or an override template, or an include... doesn't matter).
-2) in there, insert some unique text that the script will look for
-3) run the script with a set of starting nodes, the URL to use, and your unique string. 
-4) the script will descend down all the subtrees of the given nodes, pull their output, and look for the unique string
+
+1. find the template in question (either a template, or an override template, or an include... doesn't matter).
+2. in there, insert some unique text that the script will look for
+3. run the script with a set of starting nodes, the URL to use, and your unique string. 
+4. the script will descend down all the subtrees of the given nodes, pull their output, and look for the unique string
 
 You would use this script if you arrive at an unknown site, and want to know precisely what the impact will be of changing a generic "listitem" rendering of a node/class.
 
