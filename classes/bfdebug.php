@@ -1,6 +1,19 @@
 <?php
 
 class bfdebug extends bfCustomExtension {
+	// Extension definitions
+	static $operatorDetailType = "array";
+	static $operatorDetail = array(
+		"bfdebug" => array( // piped in: what we need to show in debug
+			"depth" => array("int", false),
+			"params" => array("array", false)
+		),
+		"bfdebugoverrides" => array(),
+		"bfdebugvars" => array(),
+		"bfdebugoperators" => array(),
+		"bfdebugDisableAll" => array(), // disables ALL debug output. Good for spot checking dev work, or dev-proofing modules/scripts returning json/xml
+	);
+
 	protected $xmlDoc = null;
 	
 	function __construct() {
